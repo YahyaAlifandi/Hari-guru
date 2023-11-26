@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARI GURU</title>
+    <style>
+        body {
+            justify-content: center;
+            align-items: center;
+            height: 95vh;
+            display: flex;
+        }
+        .body-frem {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 360px;
+            height: 640px;
+            overflow: hidden;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            border-radius: 5px;
+        }
+        .frem {
+            overflow: hidden;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            width: 360px;
+            height: 640px;
+            flex-shrink: 0;
+            background: url("Img/BG.jpg"), lightgray 50% / cover no-repeat;
+            background-size: 285%;
+            background-position-x: 685px;
+            overflow: hidden;
+        }
+        h2 {
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        h3 {
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            line-height: 0px;
+        }
+        .rec-4 h3 {
+            color: #FFF;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+        }
+        .rec-1 {
+            width: 255px;
+            height: 118px;
+            flex-shrink: 0;
+            position: absolute;
+            border-radius: 10px;
+            border: 0.5px solid #FFF;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(2.5px);
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            animation: load-rec 1s ease-in-out;
+            opacity: 0;
+            animation-delay: 0.5s;
+            z-index: 1;
+        }
+        .rec-2 {
+            width: 255px;
+            height: 118px;
+            flex-shrink: 0;
+            position: absolute;
+            border-radius: 10px;
+            border: 0.5px solid #FFF;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(2.5px);
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            animation: in-rec 1s ease-in-out;
+            opacity: 0;
+            display: none;
+            z-index: 1;
+        }
+        .rec-3 {
+            width: 255px;
+            height: 118px;
+            flex-shrink: 0;
+            position: absolute;
+            border-radius: 10px;
+            border: 0.5px solid #FFF;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(2.5px);
+            justify-content: center;
+            align-items: center;
+            flex-flow: column nowrap;
+            opacity: 0;
+            display: none;
+            z-index: 1;
+        }
+        h2 {
+            line-height: 0;
+        }
+        h3 {
+            line-height: 0;
+        }
+        .rec-2 h3 {
+            line-height: 0;
+        }
+
+        @keyframes in-rec {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            } 50% {
+                opacity: 100%;
+                transform: scale(1.1);
+            } 100% {
+                opacity: 100%;
+                transform: scale(1);
+            }
+        }
+        @keyframes load-rec {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            50% {
+                opacity: 100%;
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes s-1 {
+            0% {
+                margin-block: 0;
+            } 100% {
+                margin-block: 400px;
+            }
+        }
+        .bt button {
+            margin-top: 70px;
+            margin-left: -145px;
+            padding-inline: 20px;
+            padding-block: 5px;
+            border: 0.5px solid #FFF;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(2.5px);
+            border-radius: 5px;
+            color: white;
+            position: absolute;
+
+        }
+        .bt-1 {
+            margin-top: 170px;
+            padding-inline: 20px;
+            padding-block: 5px;
+            border: 0.5px solid #FFF;
+            background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+            box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(2.5px);
+            border-radius: 5px;
+            color: white;
+            display: none;
+        }
+        .bt button:active {
+            scale: 0.9;
+            animation-duration: 600ms;
+        }
+        .cakep {
+            scale: 0.9;
+            position: absolute;
+            z-index: 3;
+            font-family: sans-serif;
+            margin-bottom: 200px;
+            border-radius: 2px;
+            border: solid 1px black;
+            padding: 5px;
+            padding-inline: 10px;
+            transform: translateX(-300px);
+            animation: meluncur 8s ease-out;
+            animation-delay: 0.3s;
+            display: none;
+        }
+        @keyframes meluncur {
+            0% {
+                transform: translateX(-300px);
+            } 100% {
+                transform: translateX(300px);
+            }
+        }
+        .email img {
+            width: 50px;
+            animation: email 2s ease-in-out infinite;
+        }
+        .email {
+            background: none;
+            border: none;
+            line-height: 0px;
+        }
+        .rec-2 p {
+            color: white;
+            font-family: sans-serif;
+        }
+        @keyframes email {
+            0% {
+                transform: scale(1);
+            } 50% {
+                transform: scale(1.1);
+            } 100% {
+                transform: scale(1);
+            }
+        }
+        .surat img {
+            width: 300px;
+            text-align: center;
+            z-index: 5;
+            position: absolute;
+            margin-left: -35px;
+            display: none;
+        }
+        .surat {
+            margin-bottom: 350px;
+            margin-right: 230px;
+        }
+        @keyframes in {
+            0% {
+                transform: translateY(40px);
+                opacity: 0;
+                scale: 0;
+            } 50% {
+                transform: translateY(0px);
+                opacity: 1;
+                scale: 1.1;
+            } 100% {
+                transform: translateY(0px);
+                opacity: 1;
+                scale: 1;
+            }
+        }
+    </style>
+</head>
+<body onload="load()">
+    <div class="body-frem">
+        <div class="frem" id="04">
+            <div class="surat">
+              <img id="005" src="Img/surat.png">
+            </div>
+            <button class="cakep" id="ckp" onclick="cakp()">CAKEPPPPP.....(Click!)</button>
+            <div class="rec-1" id="02">
+                <h2>Assalamualaikum wr.wb</h2>
+                <h2>Hai Bu!, Lanjut >></h2>
+            </div>
+            <div class="rec-2" id="03">
+                <button class="email" onclick="email()"><img src="Img/mail.png" alt="" srcset=""></button>
+                <p>Ada Satu Email Untuk Ibu!</p>
+            </div>
+            <div class="bt">
+                <button class="bt" id="01" onclick="but()">Next</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    function load() {
+        const rec = document.querySelector(".rec-1");
+        document.getElementById("04").style.scale = "1.1";
+        document.getElementById("04").style.transitionDuration = "2s";
+        rec.style.display = "flex";
+        setTimeout( () => {
+            rec.style.opacity = "1";
+        }, 1000);
+    }
+
+    function but() {
+        document.getElementById("02").style.display = "none";
+        document.getElementById("03").style.display = "flex";
+        document.getElementById("03").style.opacity = "1";
+        document.getElementById("04").style.scale = "1";
+        document.getElementById("04").style.transitionDuration = "2s";
+        document.getElementById("01").style.display = "none";
+    }
+    function email() {
+        document.getElementById("005").style.display = "flex";
+        document.getElementById("005").style.animation = "in 2s ease-in-out";
+        document.getElementById("04").style.scale = "1.1";
+        document.getElementById("04").style.transitionDuration = "2s";
+    }
+
+</script>
+</html>

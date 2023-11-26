@@ -1,0 +1,20 @@
+.frame {
+    
+}
+.rectengel-1 {
+    width: 255px;
+    height: 118px;
+    flex-shrink: 0;
+
+    border-radius: 10px;
+    border: 0.5px solid #FFF;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.20) -13.87%, rgba(255, 255, 255, 0.12) 52%, rgba(0, 0, 0, 0.20) 105.64%);
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2.5px);
+
+
+
+
+    background-size: 285%;
+    background-position-x: 685px;
+}
